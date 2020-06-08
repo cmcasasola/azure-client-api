@@ -1,19 +1,22 @@
-package pe.com.examples.mongoclientapi.entity;
+package pe.com.examples.azureclientapi.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
 
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
+@Table
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 public class Client {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
     private String name;
     private String lastName;

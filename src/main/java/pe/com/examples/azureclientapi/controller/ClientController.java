@@ -1,9 +1,9 @@
-package pe.com.examples.mongoclientapi.controller;
+package pe.com.examples.azureclientapi.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import pe.com.examples.mongoclientapi.dto.ClientDto;
-import pe.com.examples.mongoclientapi.service.ClientService;
+import pe.com.examples.azureclientapi.dto.ClientDto;
+import pe.com.examples.azureclientapi.service.ClientService;
 
 import java.util.List;
 

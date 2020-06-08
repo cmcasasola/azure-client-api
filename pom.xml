@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>pe.com.examples</groupId>
-	<artifactId>mongo-client-api</artifactId>
+	<artifactId>azure-client-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>mongo-client-api</name>
+	<name>azure-client-api</name>
 	<description>Example with Spring Mongo</description>
 
 	<properties>
@@ -19,9 +19,13 @@
 	</properties>
 
 	<dependencies>
-		<dependency>
+		<!--<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency>-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -32,6 +36,11 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
+			<version>8.2.2.jre8</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

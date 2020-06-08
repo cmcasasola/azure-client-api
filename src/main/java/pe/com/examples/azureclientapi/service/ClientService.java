@@ -1,13 +1,14 @@
-package pe.com.examples.mongoclientapi.service;
+package pe.com.examples.azureclientapi.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import pe.com.examples.mongoclientapi.dto.ClientDto;
-import pe.com.examples.mongoclientapi.entity.Client;
-import pe.com.examples.mongoclientapi.repository.ClientRepository;
+import pe.com.examples.azureclientapi.dto.ClientDto;
+import pe.com.examples.azureclientapi.entity.Client;
+import pe.com.examples.azureclientapi.repository.ClientRepository;
 
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 @Service
 @RequiredArgsConstructor
@@ -32,7 +33,7 @@ public class ClientService {
     }
 
     public List<ClientDto> listClients() {
-        return clientRepository.findAll().stream()
+        return StreamSupport.stream(clientRepository.findAll().spliterator(), false)
                 .map(client -> ClientDto.builder().id(client.getId()).name(client.getName())
                         .lastName(client.getLastName()).age(client.getAge()).birthDate(client.getBirthDate()).build())
                 .collect(Collectors.toList());

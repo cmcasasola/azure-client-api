@@ -1,4 +1,4 @@
-package pe.com.examples.mongoclientapi.dto;
+package pe.com.examples.azureclientapi.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;

@@ -1,13 +1,10 @@
-package pe.com.examples.mongoclientapi;
+package pe.com.examples.azureclientapi;
 
-import org.junit.jupiter.api.Test;
+import jdk.nashorn.internal.ir.annotations.Ignore;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
+@Ignore
 class MongoClientApiApplicationTests {
-
-	@Test
-	void contextLoads() {
-	}
 
 }
